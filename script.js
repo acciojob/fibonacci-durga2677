@@ -6,7 +6,7 @@ function fibonacci(n) {
 	if(n<=2){
 	return n-1;
 	}
-	for(let i=;i<=n-2;i++){
+	for(let i=1;i<=n-2;i++){
 		let temp=b;
 		b=a+b;
 		a=temp;
