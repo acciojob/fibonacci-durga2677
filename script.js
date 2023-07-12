@@ -1,17 +1,20 @@
 
-let a=0;b=1;
 function fibonacci(num) {
-	
-// your code here
-	if(num<=2){
-	return num-1;
-	}
-	for(let i=1;i<=num-2;i++){
-		let temp=b;
-		b=a+b;
-		a=temp;
-	}
-	return b;
+  if (num <= 0) {
+    return "Invalid input. Please enter a positive integer greater than zero.";
+  } else if (num === 1) {
+    return 0;
+  } else if (num === 2) {
+    return 1;
+  } else {
+    let a = 0;
+    let b = 1;
+    for (let i = 3; i <= num; i++) {
+      const temp = a + b;
+      a = b;
+      b = temp;
+    }
+    return b;
+  }
 }
-console.log(fibonacci(49))
-module.exports = fibonacci;
+
